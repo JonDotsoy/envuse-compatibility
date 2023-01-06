@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "envuse": "file:../tmp/envuse-4.0.0.tgz"
+  }
+}

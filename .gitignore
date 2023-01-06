@@ -1,0 +1,5 @@
+node_modules/
+!.envuse
+!.editorconfig
+!.nvmrc
+Docker*.hash
