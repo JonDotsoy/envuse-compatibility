@@ -1,38 +1,12 @@
-## Process RUN store variable
+## Compatibility
 
-To pass a variable from the child process at the main thread only need to send a line UTF-8 with the start `###=>`.
+### Envuse v4.1.0
 
-**Sample**
-
-```js
-console.log(`###=> me=Hello everybody`)
-```
-
-This script returns the next variables:
-
-```json
-{
-    "me": "Hello everybody"
-}
-```
-
-## Process RUN store environment variable
-
-This solution permit passing variables through the environment variables. need print a line UTF-8 with the start `###env=>`
-
-**Sample**
-
-```js
-console.log(`###env=> FOO=VAZ`)
-```
-
-next script:
-
-```sh
-$ env
-...
-FOO=VAZ
-...
-```
-
-
+|                                         | node:13 | node:14 | node:15 | node:16 | node:17 | node:18 | node:19 |
+| ---                                     | ---     | ---     | ---     | ---     | ---     | ---     | ---     |
+| ECMAScript modules/Import Package       | Error   | Yes     | Yes     | Yes     | Yes     | Yes     | Yes     |
+| CommonJS modules/Import Package         | Error   | Yes     | Error   | Yes     | Yes     | Yes     | Yes     |
+| CommonJS (JS) modules/Import Package    | Error   | Yes     | Error   | Yes     | Yes     | Yes     | Yes     |
+| ECMAScript modules/Parse Envuse File    | Error   | Yes     | Yes     | Yes     | Yes     | Yes     | Yes     |
+| CommonJS modules/Parse Envuse File      | Error   | Yes     | Error   | Yes     | Yes     | Yes     | Yes     |
+| CommonJS (JS) modules/Parse Envuse File | Error   | Yes     | Error   | Yes     | Yes     | Yes     | Yes     |
